@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123c35">
+  <meta name="description" content="产品运营成长岛：一套轻量、可持续、以实战输出为核心的产品运营学习系统。">
+  <title>产品运营成长岛</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <a class="brand" href="#/home" aria-label="产品运营成长岛首页">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span><strong>成长岛</strong><small>Product Ops Island</small></span>
+      </a>
+      <nav class="side-nav">
+        <a href="#/home" data-route="home"><span aria-hidden="true">⌂</span>今日</a>
+        <a href="#/learn" data-route="learn"><span aria-hidden="true">◇</span>学习地图</a>
+        <a href="#/challenge" data-route="challenge"><span aria-hidden="true">◎</span>挑战</a>
+        <a href="#/projects" data-route="projects"><span aria-hidden="true">▤</span>项目</a>
+        <a href="#/profile" data-route="profile"><span aria-hidden="true">◉</span>我的成长</a>
+      </nav>
+      <section class="sidebar-progress" aria-label="本周学习进度">
+        <div class="eyebrow">本周节奏</div>
+        <div class="sidebar-progress-head"><strong id="side-week-days">0 / 4 天</strong><span id="side-streak">🔥 0</span></div>
+        <div class="progress-track"><span id="side-week-bar"></span></div>
+        <p>不用每天满格，有稳定节奏就很好。</p>
+      </section>
+    </aside>
+
+    <main id="app" class="main" tabindex="-1"></main>
+
+    <nav class="mobile-nav" aria-label="移动端导航">
+      <a href="#/home" data-route="home"><span aria-hidden="true">⌂</span><small>今日</small></a>
+      <a href="#/learn" data-route="learn"><span aria-hidden="true">◇</span><small>学习</small></a>
+      <a href="#/challenge" data-route="challenge"><span aria-hidden="true">◎</span><small>挑战</small></a>
+      <a href="#/projects" data-route="projects"><span aria-hidden="true">▤</span><small>项目</small></a>
+      <a href="#/profile" data-route="profile"><span aria-hidden="true">◉</span><small>我的</small></a>
+    </nav>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <dialog id="confirm-dialog" class="dialog">
+    <form method="dialog">
+      <h2 id="dialog-title">确认操作</h2>
+      <p id="dialog-copy"></p>
+      <div class="dialog-actions">
+        <button class="button button-secondary" value="cancel">先不</button>
+        <button class="button button-danger" id="dialog-confirm" value="confirm">确认</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+
